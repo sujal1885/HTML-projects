@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+         .bg {
+      background-image: url('eve.jpg'); /* Replace the URL with the actual URL of your background image */
+      background-size: cover;
+      background-repeat: no-repeat;
+         }
+         
+        .container{
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px black;
+        }
+        .box{
+            max-width: 550px;
+            margin: 30px auto;
+            padding: 20px;
+            
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px black;
+        }
+        .checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+        
+.checkbox-grid label {
+            display: flex;
+            align-items: center;
+        }
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .form-group label, .form-group input, .form-group select, .form-group textarea {
+            flex: 1;
+            margin: 5px 0;
+        }
+        .form-group input[type="radio"], .form-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type="submit"] {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+    
+     <div class="container">
+        <div class="box">
+            <div class="bg1">
+        <h1>Event Registration</h1>
+        </div></div>
+        <form action="/register" method="post">
+            <div class="form-group">
+                <label for="fullname">Full Name: </label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="college">College Name: </label>
+                <input type="text" id="college" name="college" required>
+            </div>
+            <div class="form-group">
+                <label for="dept">Department: </label>
+                <select name="department" id="department">
+                    <option value="CSE">CSE</option>
+                    <option value="IT">IT</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Civil">Civil</option>
+                    <option value="MBA">MBA</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="add">Address:</label>
+                <textarea rows="5" cols="50" id="add" name="address"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div> 
+            <div class="form-group">
+                <label for="phone">Mobile Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">   
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+            </div>
+            <div class="form-group">
+                <label>Program:</label>
+                <input type="radio" name="program" value="BTECH">BTECH
+                <input type="radio" name="program" value="MTECH">MTECH
+            </div>
+            <div class="form-group">
+                <label for="year">Year: </label>
+                <select name="year" id="year">
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option
+                   <option value="3">3rd Year</option>
+                  <option value="4">4th Year</option>
+                <option value="E">Alumini</option>
+                
+            </select><br></div>
+            <div class="form-group">
+            <label for="city">City:</label>
+           
+                <select name="city" id="city">
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Amravati">Amravati</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Wardha">Wardha</option>
+                </select><br>
+                
+                
+            </select><br></div>
+            
+            <div class="form-group">
+                <label for="event">Events:</label><br>
+                <div class="checkbox-grid">
+                    <input type="checkbox" name="dj" id="dj" value="dj">
+                    <label for="dj">DJ</label>
+                    
+                    <input type="checkbox" name="photo" id="photo" value="photo">
+                    <label for="photo">Photography</label>
+                    
+                    <input type="checkbox" name="music" id="music" value="music">
+                    <label for="music">Music</label>
+                    
+                    <input type="checkbox" name="feli" id="feli" value="feli">
+                    <label for="feli">Felicitation</label>
+                    
+                    <input type="checkbox" name="game" id="game" value="game">
+                    <label for="game">Game</label>
+                    
+                    <input type="checkbox" name="co" id="co" value="co">
+                    <label for="co">Comedy</label>
+                    
+                    <input type="checkbox" name="dance" id="dance" value="dance">
+                    <label for="dance">Dance</label>
+                    
+                    <input type="checkbox" name="band" id="band" value="band">
+                    <label for="band">Band</label>
+                    
+                    <input type="checkbox" name="memo" id="memo" value="memo">
+                    <label for="memo">Memories</label>
+                </div>
+            </div>
+            
+            
+            <div class="form-group">
+                <label for="paid">Paid:</label><br>
+                <input type="radio" name="paid" value="Yes">Yes
+                <input type="radio" name="paid" value="No">No<br>
+            </div>
+            
+        </form>
+
+     </div>
+    </div>
+</body>
+</html>

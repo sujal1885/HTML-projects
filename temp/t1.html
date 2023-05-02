@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            background-image: url(bmw1.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 92vh;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            background-color: none;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .container {
+            max-width: 500px;
+            max-height: 500px;
+            color: white;
+
+        }
+
+        .overlay:hover {
+            opacity: 1;
+        }
+        
+
+        .overlay-content {
+            text-align: top;
+        }
+
+        .overlay-content a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: none;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .overlay-content a:hover {
+            background-color: black;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+        }
+
+        .top-right img {
+            width: 50px;
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .top-right img:hover {
+            background-color: whitesmoke;
+        }
+        .container-left,
+        .container-right {
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 50%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .container-left {
+            background-image: url(x3m40i.jpg);
+        }
+
+        .container-right {
+            background-image: url(x1.jpeg);
+            margin-left: 0;
+        }
+
+        
+        .container-wrapper {
+            display: flex;
+        }
+        
+        .know-more {
+            top: 2px;
+            bottom: 0;
+            left: 60px;
+            right: 0;
+            background-color:none;
+            padding: 10px;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            width: 30%;
+           color: white;
+           nav-right: 20%;
+           height: 10%;
+            border: 1px solid  white;
+            position: relative;
+            text-align: center;
+            
+        }
+        .arrow {
+                border: solid black;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 3px;
+            }
+            .right {
+             transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            }    
+
+        .container-left:hover .know-more,
+        .container-right:hover .know-more {
+            opacity: 1;
+        }
+
+        .know-more a {
+            
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: none;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .know-more a:hover {
+            background-color: grey;
+        }
+        .container1 {
+            left: 70px;
+}
+
+.box1 {
+    position:relative;
+      
+  
+  background-color:white;
+  
+}
+.grid-container {
+    background-image: url(header.jpg);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  
+}
+
+.grid-item {
+  text-align: center;
+  border: 1px solid black;
+}
+.grid-container :hover{
+    background-color: gray;
+}
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  
+}
+.info-item {
+  text-align: center;
+  border: 1px solid black;
+}
+
+        
+        
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    word-spacing: 30px;
+}
+
+.footer .box {
+    margin: 1px 15px; 
+    padding: 5px;
+    border: 1px solid #fff;
+}
+.tag1{
+        top: 140px;
+        left: 70px;
+        background-color:none;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        width: 18%;
+        color: black;
+        height: 7%;
+        border: 1px solid black;
+        position: relative;
+        text-align: center;
+    
+}
+.tag2{
+        top: 150px;
+        left: 70px;
+        background-color:none;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        width: 18%;
+        color: whitesmoke;
+        height: 7%;
+        border: 1px solid whitesmoke;
+        position: relative;
+        text-align: center;
+    
+}
+.container3{
+    width: 800px;
+    height: 700px;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div style="position:relative; left: 68px;top:140px">
+            <h1> <p style="color: white;">THE NEW i7 & 7</p></h1>
+        </div>
+        <div class="tag1">
+          <h3> EXPLORE THE i7</h3>
+        </div>
+        <div class="tag2">
+            <h3> EXPLORE THE 7</h3>
+          </div>
+        <div class="overlay">
+            
+            <div class="overlay-content">
+                <a href="#"><b>Models</b></a>
+                <a href="#"><b>Buy Now</b></a>
+                <a href="#"><b>Services</b></a>
+                <a href="#"><b>Finance</b></a>
+                <a href="#"><b>BMW World</b></a>
+            </div>
+
+        </div>
+
+        <div class="top-right">
+            <img src="basket_logo.jpg" alt="Basket Logo">
+            <img src="navigator_logo.jpg" alt="Navigator Logo">
+            <img src="search_logo.png" alt="Search Logo">
+            <img src="bmwlogo.png">
+        </div>
+        
+
+    </div>
+
+    <div class="container-wrapper">
+        
+    <div class="container-left">
+        <div style="position:relative; left: 60px;top:2px">
+            <h2> <p style="color: white;">THE FIRST-EVER X3 M40i xDRIVE</p></h2>
+        </div>
+            <div class="know-more">
+            <h3>KNOW MORE</h3>
+        </div>
+         </div>
+    <div class="container-right">
+        <div style="position:relative; left: 60px;top:2px">
+            <h2> <p style="color: white;">THE NEW BMW X1</p></h2>
+        </div>
+        <div class="know-more">
+            <h4>KNOW MORE</h4>
+        </div>
+        
+    </div>    
+    
+    </div><br>
+    <div class="container3">
+        <iframe src="https://www.youtube.com/embed/KLY-sALhkhI?autoplay=1&mute=1" width="1540" height="600" title="A YouTube video" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Q7NL_QSPzHg?autoplay=1&mute=1" width="1540px" height="600px" title="The new BMW X3 and the new BMW iX3" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="container1">
+    <div style="display: inline-block;left: 70px;">
+        <div style="padding: 10px;  background-color: white;"
+             onmouseover="this.style.backgroundColor='lightgray';"
+             onmouseout="this.style.backgroundColor='white';">
+          Body Types
+        </div>
+      </div>
+      
+      <div style="display: inline-block;left: 70px;">
+        <div style="padding: 10px;  background-color: white;"
+             onmouseover="this.style.backgroundColor='lightgray';"
+             onmouseout="this.style.backgroundColor='white';">
+          Series
+        </div>
+      </div>
+      <br><br>
+      <div style="display: inline-block;">
+        <div style="padding: 10px; border: 1px solid black; background-color: white;"
+             onmouseover="this.style.backgroundColor='lightgray';"
+             onmouseout="this.style.backgroundColor='white';">
+          ALL
+        </div>
+      </div>
+      
+      <div style="display: inline-block;">
+        <div style="padding: 10px; border: 1px solid black; background-color: white;"
+             onmouseover="this.style.backgroundColor='lightgray';"
+             onmouseout="this.style.backgroundColor='white';">
+          i
+        </div>
+      </div>
+      <div style="display: inline-block;">
+        <div style="padding: 10px; border: 1px solid black; background-color: white;"
+             onmouseover="this.style.backgroundColor='lightgray';"
+             onmouseout="this.style.backgroundColor='white';">
+          X
+        </div>
+      </div>
+      
+      <div style="display: inline-block;">
+        <div style="padding: 10px; border: 1px solid black; background-color: white;"
+             onmouseover="this.style.backgroundColor='lightgray';"
+             onmouseout="this.style.backgroundColor='white';">
+          M
+        </div>
+      </div>
+      <div style="display: inline-block;">
+        <div style="padding: 10px; border: 1px solid black; background-color: white;"
+             onmouseover="this.style.backgroundColor='lightgray';"
+             onmouseout="this.style.backgroundColor='white';">
+          7
+        </div>
+      </div>
+      
+      <div style="display: inline-block;">
+        <div style="padding: 10px; border: 1px solid black; background-color: white;"
+             onmouseover="this.style.backgroundColor='lightgray';"
+             onmouseout="this.style.backgroundColor='white';">
+          6
+        </div>
+      </div>
+      <div style="display: inline-block;">
+        <div style="padding: 10px; border: 1px solid black; background-color: white;"
+             onmouseover="this.style.backgroundColor='lightgray';"
+             onmouseout="this.style.backgroundColor='white';">
+          5
+        </div>
+      </div>
+      
+      <div style="display: inline-block;">
+        <div style="padding: 10px; border: 1px solid black; background-color: white;"
+             onmouseover="this.style.backgroundColor='lightgray';"
+             onmouseout="this.style.backgroundColor='white';">
+          3
+        </div>
+      </div>
+      <div style="display: inline-block;">
+        <div style="padding: 10px; border: 1px solid black; background-color: white;"
+             onmouseover="this.style.backgroundColor='lightgray';"
+             onmouseout="this.style.backgroundColor='white';">
+          2
+        </div>
+      </div></div><br><br>
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src="sedan1.jpeg"><br>
+              The new BMW M340i<br>
+          PETROL<br>
+          Strating from 6,920,000/- <br>
+          <p style="color: #000;"><i class="arrow right"></i><b>Configure and Price</b> </p>
+        </div>
+        <div class="grid-item">
+          <img src="sedan2.jpeg"><br>
+           THE BMW X3
+           <br>DIESEL
+          <br>Strating from 6,750,000/- 
+        </div>
+        <div class="grid-item">
+          <img src="sedan3.jpeg"><br>
+           BMW X5<br>
+           PETROL/DIESEL<br>
+
+          
+        </div>
+        <div class="grid-item">
+          <img src="sedan4.jpeg"><br>
+          The new BMW 3 Series Gran Limousine<br>
+          PETROL/DIESEL<br>
+          Starting from 5,890,000/-
+        </div>
+
+        <div class="grid-item">
+          <img src="sedan5.jpeg"><br>
+          THE NEW BMW X1<br>
+          PETROL/DIESEL<br>
+          Starting from 4,590,000/-
+        </div>
+        <div class="grid-item">
+          <img src="sedan6.jpeg"><br>
+          THE NEW BMW X7<br>
+          PETROL/DIESEL<br>Starting from 12,200,000/-        </div>
+        <div class="grid-item">
+          <img src="sedan7.jpeg"><br>
+          THE FISRT_EVER BMW XM<br>
+          PLUG-IN HYBRID<br>
+          Starting from 26,000,000/-
+        </div>
+        <div class="grid-item">
+          <img src="sedan8.jpeg"><br>
+          BMW M8 Competition COUPE<br>
+          PETROL<br>
+          Starting from 24,400,000/-
+        </div>
+      </div><br><br>
+      <div class="info">
+        <div class="info-item">
+            <img src="finance.jpg"><br>
+            <h3>BMW FINANCIAL SERVICES</h3>
+            Your new BMW is within reach. All you need is the perfect financial solution with tailor-made finance options.
+        </div>
+        <div class="info-item">
+            <img src="online.jpg">
+            <h3>BMW ONLINE SHOP</h3>
+        </div>
+        
+      </div><br><br>
+      <div style="display: flex; justify-content: space-between; margin: 0 170px;text-align: center;">
+        <div style="background-color: lightgray; width: 200px; height: 150px;text-align: center;justify-content:center;"><h3>BASKET</h3><br></div>
+        <div style="background-color: lightgray; width: 200px; height: 150px;"><h3>BOOK A TEST DRIVE</h3></div>
+        <div style="background-color: lightgray; width: 200px; height: 150px;"><h3>FIND A DEALER</h3></div>
+        <div style="background-color: lightgray; width: 200px; height: 150px;"><h3>CUREENT OFFERS</h3></div>
+        <div style="background-color: lightgray; width: 200px; height: 150px;"><h3>BMW GROUP CAREERS</h3></div>
+      </div>
+      
+      <br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer">
+        
+            <p>ContactUs</p>
+            <p> Privacy Policy</p>
+            <p>Terms & Conditions</p>
+        </div>
+    </footer> 
+    
+         
+</body>
+</html>

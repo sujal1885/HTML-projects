@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>
+            Success page
+        </title>
+    </head>
+    <style>
+        body{
+            background-color: rgb(173, 171, 171);
+        }
+        .container{
+            background-color:  white;
+            position: relative;
+            width: 40%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+        }
+        .container img{
+            max-width: 6rem;
+            position:absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .box{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width:90%;
+            height:50%;
+            margin:0 auto;
+        }
+        .box span:first-child{
+            font-size:2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            color:gray;
+            margin-bottom: 1rem;
+            margin-top:1rem;
+        }
+        .box span:nth-of-type(2) {
+            font-size: 1.5rem;
+            color: #555;
+            font-weight: 100;
+            margin-bottom: 1rem;            
+            text-align: center;
+        }
+        .box a{
+            text-decoration: none;
+            background-color: rgb(35, 216, 35);
+            padding:0.7rem;
+            color:white;
+            font-weight: 700;
+            border-radius: 5px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <img src="success.png" alt="success">
+            <div class="box">
+                <span>
+                    SUCCESS
+                </span>
+                <span>
+                    You have been successfully registered for the event.
+                </span>
+                <a href="table.html">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

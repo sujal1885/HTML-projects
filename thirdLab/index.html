@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third Lab</title>
+</head>
+<body>
+    <label for="mycolor">Select Color</label>
+    <input type="color" id="mycolor"><br>
+    <label for="mydatetime">Choose Date and Time:</label>
+    <input type="datetime-local" id="mydatetime"><br>
+    <label for="mymonth">Select Month:</label>
+    <input type="month" id="mymonth">
+    <br>
+    <label for="mynumber">Select a Number</label>
+    <input type="number" min="-1" max="100000" step="10" id="mynumber"><br>
+    <label for="myrange">Select a Number</label>
+    <input type="range" min="1" max="100000" step="10" id="myrange"><br><br>
+    <label for="mysearch">Search Website:</label>
+    <input type="search" id="mysearch" placeholder="type something"><br><br>
+    <label for="myfile">Choose File</label>
+    <input type="file" id="myfile"><br>
+    <label for="myimage">Choose Image</label>
+    <input type="image" src="back.png" width="48" height="48" id="myimage"><br><br>
+    <label>play audio</label>
+    <audio controls>
+        <source src="pathaan.mp3" type="audio/mpeg">
+    </audio>
+    <video width="100%" height="100%" controls poster="back.png" muted loop preload="metadata">
+        <source src="panda.mp4" type="video/mp4">
+    </video>
+</body>
+</html>

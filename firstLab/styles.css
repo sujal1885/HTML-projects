@@ -1,0 +1,15 @@
+.bg-img {
+    background-image: url('college.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+li {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+a {
+  color:white;
+}

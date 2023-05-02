@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title>
+            Alumni table
+        </title>
+        <style>
+            body{
+                background-color:03045e;
+                margin:0;
+                margin-bottom: 1rem;
+            }
+            .heading{
+                background-color: rgb(20, 20, 105);
+                padding: 2px;
+                padding-top: 5px;
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                color:white;
+                font-size: 2rem;
+            }
+            .heading img{
+                max-width: 5%;
+                margin-right: 1rem;
+            }
+            .heading p{
+                margin:0;
+            }
+            .image{
+                display: flex;
+            }
+            .heading div ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            .heading div ul li{
+                margin-right: 1rem;
+                font-size: 2rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: 400;
+                padding: 1rem 1rem;
+            }
+            .heading div ul li:hover{
+                background-color: white;
+                color: rgb(20, 20, 105);
+                border-radius: 1.5rem;
+                transition: 0.5s ease-in-out;
+            }
+            .heading div ul a{
+                text-align: none;
+                color:white;
+                cursor: pointer;
+            }
+            h1{
+                text-align: center;
+                font-size: 50px;
+                color:rgb(252, 252, 252);
+            }
+            .tablediv{
+                display: flex;
+                justify-content: center;
+                margin-top:70px;
+            }
+            table{
+                font-size: 20px;
+                border-collapse: separate;
+            }
+            th,td{
+                width: 200px;
+                height:60px;
+                padding-left:5px;
+            }
+            th{
+                text-align: left;
+                background-color: 0077b6;
+                color:white;
+            }
+            tr:nth-child(even) {
+                background-color: white;
+            }
+  
+            tr:nth-child(odd) {
+                background-color: rgb(246, 251, 250);
+                font-weight: bold;
+                color:rgb(12, 48, 48)
+            }
+            th:first-child {
+                border-top-left-radius: 10px;
+            }
+
+            th:last-child {
+                border-top-right-radius: 10px;
+            }
+            a{
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 20px;
+                color:red;
+                margin-top: 20px;
+                text-decoration: none;
+            }
+            a:hover{
+                color: blue;
+            }
+            span{
+                background-color: 0077b6;
+                padding:10px;
+                color:white;
+                border-radius: 5px;
+            }
+            span:hover{
+                background-color: rgb(36, 231, 36);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="heading">
+            <div class="image">
+                <img src="RCOEM.png" alt="rcoem logo">
+                <p>Shir Ramdeobaba College <br> Of Engineering and Management </p>
+            </div>
+            <div>
+                <ul>
+                    <a href="table.html"><li>Home</li></a>
+                    <a href="events.html"><li>Events</li></a>
+                    <a href="login.html"><li>Login</li></a>
+                </ul>
+            </div>
+        </div>
+        <h1>
+            Registered Alumni
+        </h1>
+        <div class="tablediv">
+            <table>
+                <tr>
+                    <th>Sr.</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Batch</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Ujjwal Prithyani</td>
+                    <td>CSE</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Bhavesh Modani</td>
+                    <td>IT</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Vighnesh</td>
+                    <td>CSE</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Varun Mantri</td>
+                    <td>CSE</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Vivek Meher</td>
+                    <td>CSE</td>
+                    <td>2025</td>
+                </tr>
+            </table>
+        </div>
+        <a href="registration.html"><span>New Registration</span></a>
+    </body>
+</html>

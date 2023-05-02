@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Inline CSS</title>
+    <style>
+        h4{
+            font-size: 50px;
+        }
+        .detaildemo{
+            margin-top:1em;
+        }
+        details[open]+*:last-of-type{
+            margin-top:8em;
+        }
+        :not(details[open])+*:last-of-type{
+            margin-top:1em;
+        }
+        #bigo{
+            color:blue;
+            text-shadow: 2px 2px;
+        }
+        *{
+            color:blueviolet;
+            background-color: aquamarine;
+        }
+        #new{
+            width:100px;
+            height:100px;
+            background-color: red;
+            animation-name:example;
+            animation-duration: 4s;
+        }
+        @keyframes example{
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+        .bottomD{
+            text-align: center;
+            font-size: 20px;
+        }
+        h4:hover{
+            color:white;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Ujjwal hushar banda hai</h1>
+    <p style="font-size: 20px;color:rgb(173, 50, 230);text-align: center;">Gondia Tiger</p>
+    <hr style="height:20px;background-color: rgb(226, 213, 23);">
+    <details style="height:20px;background-color: bisque;padding: 5px;">
+        <summary style="font-size: 20px;color:blue;">
+            Visions of Ujjwal
+        </summary>
+        <p style="background-color: azure;" >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </details>
+    <div class="detaildown">
+        <h3>
+            Gondia don 
+        </h3>
+    </div>
+    <h4 id="bigo">This is bigger version of h4</h4>
+
+    <div>
+        <ul>
+            <li>
+                ujjwal is hushar
+            </li>
+            <li>
+                ujjwal is handsome
+            </li>
+            <li>
+                ujjwal is tiger
+            </li>
+            <li>
+                ujjwal is lion
+            </li>
+            <li style="margin-top: 0px;">
+                ujju bhai gale me tai
+            </li>
+        </ul>
+    </div>
+
+    <div id="new">
+        ujjwal is tiger
+    </div>
+    <div class="bottomD">
+        <h5>ujjwal</h5>
+        <p>gondia tiger</p>
+        <h6>gondia yuvarajyam</h6>
+    </div>
+</body>
+</html>

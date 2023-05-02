@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            margin:0;
+            background-color: #f7f7f7;
+            z-index: 2;
+        }
+        #my-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .heading{
+            background-color: #e40046;
+            height:15vh;
+            color:white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        .heading h4{
+            margin:0;
+            font-size: 1.8rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .heading ul{
+            list-style-type: none;
+            display: flex;
+        }
+        .heading ul li{
+            margin-right: 2rem;
+        }
+        .heading ul li a{
+            font-size: 1.2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            text-decoration: none;
+        }
+        .heading ul li a:hover{
+            padding: 0.5rem 1.5rem;
+            background-color: white;
+            color:#e40046;
+            border-radius: 1rem;
+            transform: scale(1.2);
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .container{
+            background-color: white;
+            width: 30%;
+            margin:3rem auto;
+            border-radius: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        .loginhead{
+            height: 3rem;
+            background-color: #e40046;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+        .loginhead span{
+            font-size: 2rem;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+        .box form{
+            display:flex;
+            flex-direction: column;
+        }
+        label {
+            color: rgb(48, 36, 36);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input {
+            margin-bottom: 0.8rem;
+            height: 2rem;
+            border: none;
+            border-bottom: 1px solid gray;
+            font-size: 1.2rem;
+        }
+        input::placeholder{
+            font-size: 0.9rem;
+        }
+        input:focus{
+            outline: none;
+            border: 0.15rem solid gray;
+            border-radius: 0.5rem;
+        }
+        textarea{
+            border-color: gray;
+            margin-bottom: 1rem;
+            border: none;
+            height: 2rem;
+            border-bottom: 1px solid gray;
+        }
+        textarea:focus{
+            outline: none;
+            border: 0.15rem solid gray;
+            border-radius: 0.5rem;
+        }
+        button{
+            background-color: #e40046;
+            padding: 1rem;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 0.2rem;
+            cursor:pointer;
+            margin: 1rem 0;
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h4>RCZON</h4>
+        <ul>
+            <li><a href="index.html">Shop</a></li>
+            <li><a href="login.html">Cart</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+    <video autoplay muted loop id="my-video">
+        <source src="vid.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="loginhead">
+            <span>Login</span>
+        </div>
+        <div class="box">
+            <form action="index.html">
+                <label for="name">
+                    Name
+                </label>
+                <input type="text" placeholder="Name" id="name" required>
+                <label for="username">Username</label>
+                <input type="text" placeholder="Username" id="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+                <label for="address">Address</label>
+                <textarea name="address" id="address" cols="30" rows="1">Address</textarea>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

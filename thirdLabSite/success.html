@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+         body{
+            margin:0;
+            background-color: #f7f7f7;
+        }
+        .heading{
+            background-color: #e40046;
+            height:15vh;
+            color:white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 1rem;
+        }
+        .heading h4{
+            margin:0;
+            font-size: 1.8rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .heading ul{
+            list-style-type: none;
+            display: flex;
+        }
+        .heading ul li{
+            margin-right: 2rem;
+        }
+        .heading ul li a{
+            font-size: 1.2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            text-decoration: none;
+        }
+        .heading ul li a:hover{
+            padding: 0.5rem 1.5rem;
+            background-color: white;
+            color:#e40046;
+            border-radius: 1rem;
+            transform: scale(1.2);
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .containersuccess{
+            width: 40%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            margin: 1rem auto;
+            margin-top: 6rem;
+            padding: 1rem;
+            justify-content: center;
+            border-radius: 1rem;
+        }
+        .containersuccess img{
+            max-width: 20%;
+            margin: 1rem auto;
+        }
+        .containersuccess a,span{
+            text-align: center;
+        }
+        .containersuccess span{
+            font-size: 1.5rem;
+            color: gray;
+            margin-bottom: 1rem;
+        }
+        .containersuccess a{
+            width: 50%;
+            margin: 0 auto;
+            padding: 0.2rem;
+            background-color: #e40046;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            height: 2rem;
+            border-radius: 1rem;
+            line-height: 2rem;
+            margin-bottom: 1rem;
+        }
+        .containersuccess a:hover{
+            transform: scale(1.1);
+            transition: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h4>RCZON</h4>
+        <ul>
+            <li><a href="index.html">Shop</a></li>
+            <li><a href="login.html">Cart</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+    <div class="containersuccess">
+        <img src="success.png" alt="">
+        <span>Successfully added to cart</span>
+        <span>Go back to home</span>
+        <a href="index.html">Home</a>
+    </div>
+</body>
+</html>
