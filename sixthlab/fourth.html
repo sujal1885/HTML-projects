@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform" onsubmit="return handleform()">
+        <input type="text" name="fname">
+        <button>submit</button>
+    </form>
+</body>
+<script>
+    function handleform(){
+        var regex = /^(?=[A-Z]*)(?=[a-z]*)(?=\d*)$/;
+        if(document.forms.myform.fname.value.match(regex)){
+            alert('right');
+            return true;
+        }
+        alert('wrong input');
+        return false;
+    }
+</script>
+</html>

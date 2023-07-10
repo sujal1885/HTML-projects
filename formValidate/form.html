@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(39, 31, 31);
+        }
+        .myform{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(151, 150, 130);
+            border-radius: 1rem;
+            padding: 0.7rem;
+            width: 30%;
+            margin-top: 2rem;
+        }
+        .myform h2{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .myform button{
+            width: 40%;
+            margin: 0 auto;
+            background-color: blue;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 0.3rem;
+            color: white;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        .myform input{
+            height: 2rem;
+            border-radius: 0.5rem;
+        }
+        .myform textarea,select{
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <form name="myform" method="post" onsubmit="return validateform()" class="myform">
+        <h2>Registration Form</h2>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="address">Address</label>
+        <textarea name="address" id="address" cols="30" rows="2" required></textarea>
+        <label for="country">Choose a Country</label>
+        <select name="country" id="country" required>
+            <option value="">Select a country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+        </select>
+        <label for="zipcode">ZIP Code</label>
+        <input type="number" name="zipcode" id="zipcode" required>
+        <p>Gender</p>
+        <div>
+            <input type="radio" id="male" name="gender" value="MALE" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="FEMALE" required>
+            <label for="female" >Female</label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+<script>
+    function validateform(){
+        return validateName();
+    }
+    function validateName(){
+        let name = document.myform.name.value;
+        let letters = /^[A-Za-z]+$/;
+        if(!name.match(letters)){
+            alert('Name field should contain only alphabets');
+            return false;
+        }
+        else{
+            return validatePassword();
+        }
+    }
+    function validatePassword(){
+        let password = document.myform.password.value;
+        if(password.length<6){
+            alert('Password should be of minimum 6 characters');
+            return false;
+        }else{
+            return validateEmail();
+        }
+    }
+    function validateEmail(){
+        let email = document.myform.email.value;
+        let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(!email.match(mailformat)){
+            alert("Enter a valid email address");
+            return false;
+        } else{
+            return validateCountry();
+        }
+    }
+    function validateCountry(){
+        let countrySelect = document.getElementById('country');
+        if(countrySelect.value === ''){
+            alert('Please select a country');
+            return false;
+        } else{
+            alert("Form sumbitted successfully");
+            return true;
+        }
+    }
+</script>
+
+</html>

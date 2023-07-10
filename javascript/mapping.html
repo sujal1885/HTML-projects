@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+        }
+        img {
+            width: 100%;
+        }
+        #box{
+            width: 350px;
+            height: 120px;
+            position:absolute;
+            background-color: black;
+            top: 120px;
+            left: 500px;
+            opacity: 0.4;
+            font-size: 2rem;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <map name="image-map">
+        <area id="seven" onclick="handlebutton()" alt="seven" title="seven"  coords="498,307,552,361" shape="rect">
+        <area id="eight" onclick="handlebutton()"  alt="eight" title="eight"  coords="581,309,635,361" shape="rect">
+        <area id="nine" onclick="handlebutton()"  alt="nine" title="nine"  coords="654,309,706,359" shape="rect">
+        <area id="four" onclick="handlebutton()"  alt="four" title="four"  coords="501,394,553,440" shape="rect">
+        <area id="five" onclick="handlebutton()" alt="five" title="five"  coords="576,442,628,391" shape="rect">
+        <area id="one" onclick="handlebutton()"  alt="one" title="one"  coords="508,469,548,511" shape="rect">
+        <area id="six" onclick="handlebutton()"  alt="six" title="six"  coords="655,394,708,439" shape="rect">
+        <area id="two" onclick="handlebutton()"  alt="two" title="two"  coords="581,471,628,512" shape="rect">
+        <area id="three" onclick="handlebutton()"  alt="three" title="three"  coords="653,470,707,514" shape="rect">
+        <area id="zero" onclick="handlebutton()" alt="zero" title="zero"  coords="503,547,548,588" shape="rect">
+        <area id="point" onclick="handlebutton()"  alt="point" title="point"  coords="655,555,705,591" shape="rect">
+        <area id="ac" onclick="handlebutton()"  alt="ac" title="ac"  coords="496,244,551,283" shape="rect">
+        <area id="del" onclick="handlebutton()"  alt="del" title="del"  coords="574,243,633,286" shape="rect">
+        <area id="percent" onclick="handlebutton()"  alt="percent" title="percent"  coords="659,246,707,287" shape="rect">
+        <area id="divide" onclick="handlebutton()"  alt="divide" title="divide"  coords="728,248,785,286" shape="rect">
+        <area id="multiply" onclick="handlebutton()"  alt="multiply" title="multiply"  coords="728,307,789,359" shape="rect">
+        <area id="subtract" onclick="handlebutton()"  alt="subtract" title="subtract"  coords="731,394,783,442" shape="rect">
+        <area id="add" onclick="handlebutton()"  alt="add" title="add"  coords="731,471,785,518" shape="rect">
+        <area id="equals" onclick="handlebutton()"  alt="equals" title="equals"  coords="734,554,782,590" shape="rect">
+    </map>
+    <img src="calculator.jpg" alt="Calculator Image" usemap="#image-map" />
+    <div id="box">
+
+    </div>
+</body>
+    <script>
+        function handlebutton(){
+            console.log("hello gondia");
+            document.getElementsById("box").innerHTML = "seven";
+        }
+    </script>
+</html>

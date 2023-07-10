@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <p></p>
+    <form name="myForm">
+        <p>Name</p>
+        <input type="text" name="myName" ng-model="myName" required>
+        <span ng-show="myForm.myName.$touched && myForm.myName.$invalid">wrong number</span>
+
+        <p>Address:
+            <input type="text" name="myAddress" ng-model="myAddress" required>
+        </p>
+    </form>
+</body>
+</html>

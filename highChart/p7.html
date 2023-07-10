@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        .BarChart{
+            width: 50%;
+        }
+        .BubbleChart{
+            width: 50%;
+        }
+        .LineChart{
+            width: 50%;
+        }
+        .RadarChart{
+            width: 50%;
+        }
+        .mixedChart{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Highcharts</h1>
+    <!-- first chart -->
+    <h2>1. Bar chart</h2> 
+    <div class="BarChart">
+        <canvas id="barChart"></canvas>
+    </div>
+    <!-- second chart -->
+    <h2>2. Bubble chart</h2>
+    <div class="BubbleChart">
+        <canvas id="bubbleChart"></canvas>
+    </div>
+    <!-- third chart -->
+    <h2>3. Line chart</h2>
+    <div class="LineChart">
+        <canvas id="lineChart"></canvas>
+    </div>
+    <!-- fourth chart -->
+    <h2>4. Radar chart</h2>
+    <div class="RadarChart">
+        <canvas id="radarChart"></canvas>
+    </div>
+    <!-- fifth chart -->
+    <h2>5. Mixed chart</h2>
+    <div class="mixedChart">
+        <canvas id="ctx"></canvas>
+    </div>
+</body>
+<script>
+
+    const data = [
+            { year: 2010, count: 10 },
+            { year: 2011, count: 20 },
+            { year: 2012, count: 15 },
+            { year: 2013, count: 25 },
+            { year: 2014, count: 22 },
+            { year: 2015, count: 30 },
+            { year: 2016, count: 28 },
+        ];
+
+        function createChart(chartType, chartElementId) {
+            new Chart(
+                document.getElementById(chartElementId),
+                {
+                type: chartType,
+                data: {
+                    labels: data.map(row => row.year),
+                    datasets: [
+                    {
+                        label: 'Acquisitions by year',
+                        data: data.map(row => row.count)
+                    }
+                    ]
+                }
+                }
+            );
+    }
+    (async function() {   
+        createChart('bar', 'barChart');
+        createChart('bubble', 'bubbleChart');
+        createChart('line', 'lineChart');
+        createChart('radar', 'radarChart');
+    })();
+
+    const mixedChart = new Chart(ctx, {
+    data: {
+        datasets: [{
+            type: 'bar',
+            label: 'Bar Dataset',
+            data: [10, 20, 30, 40]
+        }, {
+            type: 'line',
+            label: 'Line Dataset',
+            data: [10, 20, 20, 50],
+        }],
+        labels: ['January', 'February', 'March', 'April']
+    },
+});
+ 
+</script>
+</html>

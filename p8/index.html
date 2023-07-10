@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+        input.ng-invalid {
+            background-color:pink;
+        }
+        input.ng-valid {
+            background-color:lightgreen;
+        }
+        </style>
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <form name="myForm" ng-submit="myFunc()">
+        Name : <input name="myInput" ng-model="myInput" required>
+        <span ng-if="myForm.myInput.$valid">
+            valid
+        </span>
+        <span ng-if="!myForm.myInput.$valid">
+            not valid
+        </span>
+        <br><br><br>
+        Email : <input name="myEmail" type="email" ng-model="myEmail">
+        <span ng-if="myForm.myEmail.$valid">
+            valid
+        </span>
+        <span ng-if="!myForm.myEmail.$valid">
+            not valid
+        </span>
+        <br><br><br>
+        PassWord : <input type="password" name="myPassword" ng-model="myPassword" ng-minlength="5">
+        <span style="color:Red" ng-show="myForm.myPassword.$error.minlength"> Minimum 5 Characters Required </span>
+
+        <button type="submit">Submit</button>
+    </form>
+    <p>{{myTxt}}</p>
+</body>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+        $scope.myTxt = "You have not yet clicked submit";
+        $scope.myFunc = function () {
+            $scope.myTxt = "You clicked submit!";
+        }
+    });
+</script>
+</html>

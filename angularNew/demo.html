@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <div>
+        <form>
+            First Name : <input type="text" ng-model="firstname"/>
+            <br>
+            <select ng-model="myVar">
+                <option value=""></option>
+                <option value="dogs">Dogs</option>
+                <option value="tuts">Tutorials</option>
+                <option value="cars">Cars</option>
+            </select>
+            <input type="text" required>
+            <button type="submit"></button>
+        </form>
+    </div>
+    <div ng-switch="myVar">
+        <div ng-switch-when="dogs">
+            <h1>Dogs</h1>
+            <p>Welcome to a world of dogs.</p>
+        </div>
+        <div ng-switch-when="tuts">
+            <h1>Tutorials</h1>
+            <p>Welcome to a world of tuts.</p>
+        </div>
+        <div ng-switch-when="cars">
+            <h1>Cars</h1>
+            <p>Welcome to a world of cars.</p>
+        </div>
+    </div>
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('formCtrl',function($scope){
+            $scope.firstname = "John";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body{
+            background-color: #FFEADD;
+            padding: 1rem;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: 800;
+            font-size: 2.5rem;
+        }
+        .container{
+            background-color: #FCAEAE;
+            padding: 1rem;
+            border: 1px solid #FF8989;
+            border-radius: 0.5rem;
+            width: 70%;
+            margin: 0 auto;
+        }
+        .container form{
+            display: flex;
+            flex-direction: column;
+        }
+        .container form label{
+            font-size: 1.3rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+        .container form input{
+            background-color: #FF6666;
+            border:none;
+            height: 2rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .container form textarea{
+            background-color: #FF6666;
+            border:none;
+            border-radius: 0.5rem;
+            margin-bottom: 0.9rem;
+        }
+        p{
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+        .gender{
+            display: flex;
+            align-items: center;
+        }
+
+        button{
+            background-color: #FF6666;
+            border: none;
+            padding: 0.5rem;
+            color: white;
+            font-size: 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <h1>Registration Form</h1>
+    <div class="container">
+        <form name="myForm" ng-submit="myFunc()">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" ng-model="myInput" required>
+
+            <!-- <span ng-if="myForm.name.$valid" style="color:red;">
+                valid
+            </span> -->
+
+            <span ng-if="!myForm.name.$valid" style="color:red;">
+                Name is not valid
+            </span>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" ng-model="myEmail" required>
+
+            <span ng-if="myForm.email.$valid" style="color:red;">
+                Email is valid
+            </span>
+            <span ng-if="!myForm.email.$valid" style="color:red;">
+                Email not valid
+            </span>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" ng-model="myPassword" ng-minlength="5" required>
+
+            <span style="color:Red" ng-show="myForm.password.$error.minlength"> Minimum 5 Characters Required </span>
+
+            <label for="phone">Phone</label>
+            <input type="phone" name="phone" id="phone">
+
+            <p>Gender</p>
+            <div class="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender">
+            </div>
+
+            <label for="address">Address</label>
+            <textarea name="address" id="address" cols="30" rows="10"></textarea>
+            <button>
+                Submit
+            </button>
+        </form>
+        <p>{{myTxt}}</p>
+    </div>
+</body>
+
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+        $scope.myTxt = "You have not yet clicked submit";
+        $scope.myFunc = function () {
+            $scope.myTxt = "You clicked submit!";
+            window.location.reload();
+        }
+    });
+</script>
+
+</html>

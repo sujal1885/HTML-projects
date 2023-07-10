@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        .container{
+            height: 200px;
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+        }
+        #bd{
+            background-color: white;
+        }
+    </style>
+</head>
+<body id="bd">
+    <h1>Ujjwal hoshiar banda hai</h1>
+    <div class="container" >
+        <h2>Pehle mai aisa tha</h2>
+        <img id="container1" src="weak.png" alt="weak">
+        <button onclick=change()>After change</button>
+        <button onclick=dark()>dark</button>
+    </div>
+    <script>
+        function change(){
+            document.getElementById('container1').src = 'strong.png';
+        }
+        function dark(){
+            document.getElementById('bd').style.backgroundColor = 'black'; 
+            document.getElementById('bd').style.color = 'white'; 
+        }
+    </script>
+</body>
+</html>
